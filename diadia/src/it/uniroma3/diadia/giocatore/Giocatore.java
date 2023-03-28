@@ -11,7 +11,7 @@ public class Giocatore {
 	}
 
 	public Borsa getBorsa() {
-		return borsa;
+		return this.borsa;
 	}
 
 	public void setBorsa(Borsa borsa) {
