@@ -1,14 +1,31 @@
-package it.uniroma3.diadia;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Test;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Stanza;
 
-class PartitaTest {
+public class PartitaTest {
 
+	Partita p = new Partita();
+	Stanza s = new Stanza("Stanza");
+	
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testGetStanzaVincente() {
+		assertEquals("Biblioteca", p.getLabirinto().getStanzaVincente().getNome());
 	}
 
+	@Test
+	public void testSetStanzaCorrente() {
+		p.getLabirinto().setStanzaCorrente(s);
+		assertEquals(s, p.getLabirinto().getStanzaCorrente());
+	}
+
+	@Test
+	public void testIsFinita() {
+		
+		assertFalse(p.isFinita());
+	}
+	
 }
