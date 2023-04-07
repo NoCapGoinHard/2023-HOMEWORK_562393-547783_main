@@ -3,7 +3,7 @@ package it.uniroma3.diadia;
 import java.util.Scanner;
 
 /**
- * Questa classe modella un comando.
+ * Questa interfaccia è addetta ai comandi.
  * Un comando consiste al piu' di due parole:
  * il nome del comando ed un parametro
  * su cui si applica il comando.
@@ -14,7 +14,33 @@ import java.util.Scanner;
  * @version base
  */
 
-public class Comando {
+public interface Comando {
+	
+	/**
+	 * esecuzione del comando
+	 */
+	public void esegui(Partita partita);
+	
+	
+	/**
+	 * setter parametro del comando
+	 */
+	public void setParametro(String parametro);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
     private String nome;
     private String parametro;
