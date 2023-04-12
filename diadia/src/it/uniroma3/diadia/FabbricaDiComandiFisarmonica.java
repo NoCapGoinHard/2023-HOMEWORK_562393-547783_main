@@ -1,8 +1,12 @@
 package it.uniroma3.diadia;
 
-public class FabbricaDiComandiFisarmonica {
-	public Comando costruisciComando(String istruzione) {
+import java.util.Scanner;
 
+
+	public class FabbricaDiComandiFisarmonica implements FabbricaDiComandi {
+		
+	@Override
+	public Comando costruisciComando(String istruzione) {
 		//var. d'istanza
 		Scanner scannerDiParole = new Scanner(istruzione);
 		String nomeComando = null;
@@ -43,4 +47,8 @@ public class FabbricaDiComandiFisarmonica {
 
 		return comando;
 	}
+	
+	
+	
+	
 }

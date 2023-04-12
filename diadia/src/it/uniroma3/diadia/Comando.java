@@ -21,6 +21,7 @@ public interface Comando {
 	 */
 	public void esegui(Partita partita);
 	
+	public String getParametro();
 	
 	/**
 	 * setter parametro del comando
@@ -28,44 +29,34 @@ public interface Comando {
 	public void setParametro(String parametro);
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-    private String nome;
-    private String parametro;
-
-    public Comando(String istruzione) {
-		Scanner scannerDiParole = new Scanner(istruzione);
-
-		// prima parola: nome del comando
-		if (scannerDiParole.hasNext())
-			this.nome = scannerDiParole.next(); 
-
-		// seconda parola: eventuale parametro
-		if (scannerDiParole.hasNext())
-			this.parametro = scannerDiParole.next();
-    }
-
-    public String getNome() {
-        return this.nome;
-    }
-
-    public String getParametro() {
-        return this.parametro;
-    }
-
-    public boolean sconosciuto() {
-        return (this.nome == null);
-    }
 }
+	//PRIMA CHE DIVENISSE UN'INTERFACE SI OCCUPAVA DEI COMANDI LUI 
+//	
+//
+//    private String nome;
+//    private String parametro;
+//
+//    public Comando(String istruzione) {
+//		Scanner scannerDiParole = new Scanner(istruzione);
+//
+//		// prima parola: nome del comando
+//		if (scannerDiParole.hasNext())
+//			this.nome = scannerDiParole.next(); 
+//
+//		// seconda parola: eventuale parametro
+//		if (scannerDiParole.hasNext())
+//			this.parametro = scannerDiParole.next();
+//    }
+//
+//    public String getNome() {
+//        return this.nome;
+//    }
+//
+//    public String getParametro() {
+//        return this.parametro;
+//    }
+//
+//    public boolean sconosciuto() {
+//        return (this.nome == null);
+//    }
+//}

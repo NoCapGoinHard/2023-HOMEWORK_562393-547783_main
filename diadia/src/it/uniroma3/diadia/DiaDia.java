@@ -1,6 +1,7 @@
 package it.uniroma3.diadia;
 
 import java.util.Scanner;
+
 import it.uniroma3.diadia.ambienti.Stanza;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
@@ -54,13 +55,14 @@ public class DiaDia {
 	
 	private boolean processaIstruzione(String istruzione) {
 		Comando comandoDaEseguire;
-		 FabbricaDiComandi factory = new FabbricaDiComandi()
+		FabbricaDiComandiFisarmonica factory = new FabbricaDiComandiFisarmonica();
 		comandoDaEseguire = factory.costruisciComando(istruzione);
 		comandoDaEseguire.esegui(this.partita);
 		if (this.partita.vinta())
-		System.out.println("Hai vinto!");
-		if (!this.partita.giocatoreIsVivo())
-		System.out.println("Hai esaurito i CFU...");
+		io.mostraMessaggio("hai vinto!");
+		if (this.partita.getGiocatore().getCfu() == 0)
+		io.mostraMessaggio("Hai esaurito i CFU...");
+		this.partita.setFinita();
 		return this.partita.isFinita();
 		}
 
