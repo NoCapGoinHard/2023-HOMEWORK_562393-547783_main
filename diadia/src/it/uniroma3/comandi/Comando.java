@@ -1,6 +1,8 @@
-package it.uniroma3.diadia;
+package it.uniroma3.comandi;
 
 import java.util.Scanner;
+
+import it.uniroma3.diadia.Partita;
 
 /**
  * Questa interfaccia è addetta ai comandi.

@@ -1,9 +1,13 @@
-package it.uniroma3.diadia;
+package it.uniroma3.comandi;
 
+import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.ambienti.Stanza;
+import it.uniroma3.diadia.ambienti.Labirinto;
 
 public class ComandoVai implements Comando {
 	private String direzione;
+	
+	//costruttore comandoVai
 	public ComandoVai(String direzione) {
 		this.direzione = direzione;
 	}
@@ -18,7 +22,7 @@ public class ComandoVai implements Comando {
 		 Stanza prossimaStanza = null;
 		 
 		 if(direzione == null) {
-			 System.out.println("Dove vuoi andare?"
+			 io.mostraMessaggio("Dove vuoi andare?"
 			 		+ "Devi specificare una direzione");
 			 return;
 		 }
@@ -34,9 +38,16 @@ public class ComandoVai implements Comando {
 		partita.getGiocatore().setCfu(partita.getGiocatore().getCfu()-1);
 	}
  
+
  
  @Override
  public void setParametro(String parametro) {
 	 this.direzione = parametro;
- }
+ 	}
+
+@Override
+public String getParametro() {
+
+	return this.direzione;
+	}
 }
