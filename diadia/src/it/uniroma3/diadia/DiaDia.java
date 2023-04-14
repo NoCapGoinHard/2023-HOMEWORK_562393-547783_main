@@ -31,7 +31,7 @@ public class DiaDia {
 			"o regalarli se pensi che possano ingraziarti qualcuno.\n\n"+
 			"Per conoscere le istruzioni usa il comando 'aiuto'.";
 
-	static final private String[] elencoComandi = {"vai", "aiuto", "fine"};
+	static final private String[] elencoComandi = {"vai", "aiuto", "fine", "guarda", "prendi", "posa"};
 	static final private String[] elencoDirezioni = {"nord", "sud", "ovest", "est"};
 	static final private String[] prendiAttrezzo = {"prendi <nomeAttrezzo>"};
 	static final private String[] posaAttrezzo = {"posa <nomeAttrezzo>"};
