@@ -8,8 +8,9 @@ public class ComandoGuarda implements Comando {
 	public void esegui(Partita partita) {
 		partita.getLabirinto().getStanzaCorrente().getDescrizione();
 		System.out.println("\n");
-		partita.getGiocatore().getCfu();
-		System.out.println("\n");
+		int cfu = partita.getGiocatore().getCfu();
+		
+		System.out.printf("\n%d\n", cfu);
 		partita.getGiocatore().getBorsa().toString();
 		System.out.println("\n");
 	}
